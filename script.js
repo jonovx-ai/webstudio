@@ -153,15 +153,47 @@
       btn.disabled = true;
       btn.innerHTML = "Отправка…";
 
-      setTimeout(() => {
-        btn.innerHTML = "✓ Готово!";
-        form.reset();
+      // Collect form data
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
 
+      // Send to Formspree (free form endpoint)
+      const formId = form.id === 'contact-form' ? 'contact-form' : 'funnel-form';
+      const endpoint = 'https://formspree.io/f/' + formId;
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          btn.innerHTML = "✓ Готово!";
+          form.reset();
+          
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
+          }, 1500);
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      })
+      .catch(error => {
+        console.error('Form submission error:', error);
+        btn.innerHTML = "⚠ Ошибка";
+        
         setTimeout(() => {
           btn.innerHTML = originalHTML;
           btn.disabled = false;
-        }, 1500);
-      }, 1200);
+        }, 2000);
+      });
     });
   });
 })();

@@ -39,7 +39,7 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
     <div class="container navbar-inner">
-      <a href="#" class="logo">NeonEdge</a>
+      <a href="/" class="logo">NeonEdge</a>
       <div class="nav-menu">
         <div class="nav-links">
           <a href="#solutions" class="nav-link">Решения</a>
@@ -211,10 +211,10 @@
         <div class="funnel-step">
           <div class="funnel-badge">Шаг 3</div>
           <h3 class="funnel-title">Свяжитесь с нами</h3>
-          <form class="funnel-form" id="funnel-form">
-            <input type="text" class="funnel-input" placeholder="Имя" required />
-            <input type="email" class="funnel-input" placeholder="Email" required />
-            <textarea class="funnel-input" placeholder="Описание проекта" rows="4" required></textarea>
+          <form class="funnel-form" id="funnel-form" action="https://formspree.io/f/mqkndkvo" method="POST">
+            <input type="text" class="funnel-input" placeholder="Имя" name="name" required />
+            <input type="email" class="funnel-input" placeholder="Email" name="email" required />
+            <textarea class="funnel-input" placeholder="Описание проекта" name="message" rows="4" required></textarea>
             <button type="submit" class="funnel-submit">Отправить заявку</button>
           </form>
         </div>
@@ -241,12 +241,12 @@
             <a href="https://t.me/neonedge" class="contact-value" target="_blank" rel="noopener noreferrer">@neonedge</a>
           </div>
         </div>
-        <form class="contact-form reveal" data-delay="100" id="contact-form">
+        <form class="contact-form reveal" data-delay="100" id="contact-form" action="https://formspree.io/f/mqkndkvo" method="POST">
           <div class="input-group">
-            <input type="text" class="contact-input" placeholder="Имя" required />
-            <input type="email" class="contact-input" placeholder="Email" required />
+            <input type="text" class="contact-input" placeholder="Имя" name="name" required />
+            <input type="email" class="contact-input" placeholder="Email" name="email" required />
           </div>
-          <textarea class="contact-input" placeholder="Сообщение" rows="5" required></textarea>
+          <textarea class="contact-input" placeholder="Сообщение" name="message" rows="5" required></textarea>
           <button type="submit" class="btn btn-primary contact-submit">Отправить</button>
         </form>
       </div>

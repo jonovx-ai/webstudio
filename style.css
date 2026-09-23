@@ -393,7 +393,7 @@ body {
   align-items: center;
   width: max-content;
   gap: 30px;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.2em;
   animation: marquee 24s linear infinite;

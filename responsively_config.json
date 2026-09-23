@@ -1,0 +1,204 @@
+{
+  "name": "NeonEdge - Responsive Testing Config",
+  "description": "Конфигурация для тестирования сайта NeonEdge в Responsively App",
+  "url": "file:///C:/Apple/index.html",
+  "devices": [
+    {
+      "name": "iPhone SE",
+      "width": 320,
+      "height": 568,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "orientation": "portrait"
+    },
+    {
+      "name": "iPhone 12/13",
+      "width": 390,
+      "height": 844,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
+      "deviceScaleFactor": 3,
+      "isMobile": true,
+      "hasTouch": true,
+      "orientation": "portrait"
+    },
+    {
+      "name": "iPhone 14 Pro Max",
+      "width": 428,
+      "height": 926,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+      "deviceScaleFactor": 3,
+      "isMobile": true,
+      "hasTouch": true,
+      "orientation": "portrait"
+    },
+    {
+      "name": "Samsung Galaxy S21",
+      "width": 384,
+      "height": 854,
+      "userAgent": "Mozilla/5.0 (Linux; Android 11; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+      "deviceScaleFactor": 3,
+      "isMobile": true,
+      "hasTouch": true,
+      "orientation": "portrait"
+    },
+    {
+      "name": "iPad",
+      "width": 768,
+      "height": 1024,
+      "userAgent": "Mozilla/5.0 (iPad; CPU OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "orientation": "portrait"
+    },
+    {
+      "name": "iPad Pro",
+      "width": 1024,
+      "height": 1366,
+      "userAgent": "Mozilla/5.0 (iPad; CPU OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "orientation": "portrait"
+    },
+    {
+      "name": "Samsung Galaxy Tab S7",
+      "width": 800,
+      "height": 1280,
+      "userAgent": "Mozilla/5.0 (Linux; Android 11; SM-T870) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Safari/537.36",
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "orientation": "portrait"
+    },
+    {
+      "name": "Desktop Small",
+      "width": 1280,
+      "height": 720,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "orientation": "landscape"
+    },
+    {
+      "name": "Desktop Medium",
+      "width": 1440,
+      "height": 900,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "orientation": "landscape"
+    },
+    {
+      "name": "Desktop Large",
+      "width": 1920,
+      "height": 1080,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "orientation": "landscape"
+    },
+    {
+      "name": "Desktop 4K",
+      "width": 2560,
+      "height": 1440,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "deviceScaleFactor": 2,
+      "isMobile": false,
+      "hasTouch": false,
+      "orientation": "landscape"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mobile Only",
+      "devices": ["iPhone SE", "iPhone 12/13", "iPhone 14 Pro Max", "Samsung Galaxy S21"]
+    },
+    {
+      "name": "Tablets",
+      "devices": ["iPad", "iPad Pro", "Samsung Galaxy Tab S7"]
+    },
+    {
+      "name": "Desktop Only",
+      "devices": ["Desktop Small", "Desktop Medium", "Desktop Large"]
+    },
+    {
+      "name": "All Devices",
+      "devices": [
+        "iPhone SE",
+        "iPhone 12/13",
+        "iPad",
+        "Desktop Small",
+        "Desktop Medium"
+      ]
+    },
+    {
+      "name": "Quick Test",
+      "devices": ["iPhone 12/13", "iPad", "Desktop Medium"]
+    }
+  ],
+  "screenshotSettings": {
+    "format": "png",
+    "quality": 90,
+    "fullPage": true,
+    "omitBackground": false,
+    "outputDir": "./screenshots/responsively"
+  },
+  "syncSettings": {
+    "scroll": true,
+    "click": true,
+    "forms": true,
+    "navigation": true
+  },
+  "viewSettings": {
+    "layout": "grid",
+    "deviceWidth": 300,
+    "showDeviceNames": true,
+    "showRulers": true,
+    "showGuides": true,
+    "zoomLevel": 100
+  },
+  "testScenarios": [
+    {
+      "name": "Homepage Load",
+      "url": "file:///C:/Apple/index.html",
+      "actions": [
+        { "type": "wait", "duration": 2000 },
+        { "type": "screenshot", "name": "hero_section" },
+        { "type": "scroll", "position": "#solutions" },
+        { "type": "wait", "duration": 1000 },
+        { "type": "screenshot", "name": "solutions_section" },
+        { "type": "scroll", "position": "#contact" },
+        { "type": "wait", "duration": 1000 },
+        { "type": "screenshot", "name": "contact_section" }
+      ]
+    },
+    {
+      "name": "Form Interaction",
+      "url": "file:///C:/Apple/index.html#contact",
+      "actions": [
+        { "type": "wait", "duration": 2000 },
+        { "type": "click", "selector": ".contact-input" },
+        { "type": "type", "text": "Test User", "selector": "input[type='text']" },
+        { "type": "screenshot", "name": "form_filled" }
+      ]
+    },
+    {
+      "name": "Mobile Navigation",
+      "url": "file:///C:/Apple/index.html",
+      "actions": [
+        { "type": "setViewport", "width": 375, "height": 667 },
+        { "type": "wait", "duration": 2000 },
+        { "type": "screenshot", "name": "mobile_portrait" },
+        { "type": "setViewport", "width": 667, "height": 375 },
+        { "type": "screenshot", "name": "mobile_landscape" }
+      ]
+    }
+  ],
+  "notes": "Для использования в Responsively App:\n1. Установите Responsively App с https://responsively.app/\n2. Импортируйте этот конфиг в приложение\n3. Откройте URL сайта\n4. Выберите нужные устройства из пресетов\n5. Используйте Sync Mode для синхронизированного тестирования"
+}
